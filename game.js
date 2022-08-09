@@ -26,15 +26,36 @@ function playRound(playerSelection, computerSelection) {
     } else if (computerSelection == 'rock' && playerSelection == 'scissors') {
         console.log('You lose! Rock beats scissors');
     } else if (computerSelection == 'scissors' && playerSelection == 'paper') {
-        console.log('You win! Scissors beats paper');
+        console.log('You lose! Scissors beats paper');
     } else {
         console.log('You won');
     }
 }
 
-const playerSelection = 'rOCK';
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+
+/*4.
+1) Write a new function that will allow playing 5 rounds
+2) After each round there should be a message of the result
+3) The result messages should be stored somewhere, and after 5 rounds there should be a winner and loser
+4)
+*/
 
 
+function game() {
+    for (let i = 0; i < 5; i++){
 
+        let result = playRound('Rock', getComputerChoice());
+
+        if (result == 'You won') {console.log('Woah!')};
+        
+        // if (result == 'You won') {
+        //     player = player++;
+        //     console.log(player)    
+        // }
+        // } else if (result == 'You lose! Scissors beats paper' || result == 'You lose! Rock beats scissors' || result == 'You lose! Paper beats rock') {
+        //     console.log(`Score: ${computer++}`)
+        // } else {}
+    }
+}
+
+console.log(game());
