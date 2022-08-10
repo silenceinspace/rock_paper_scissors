@@ -17,45 +17,58 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
 
+    // playerSelection = prompt('Your choice?');
     playerSelection = playerSelection.toLowerCase();
 
     if (computerSelection == playerSelection) {
-        console.log('Tie');
+        return 'Tie';
     } else if (computerSelection == 'paper' && playerSelection == 'rock') {
-        console.log('You lose! Paper beats Rock');
+        return 'You lose! Paper beats Rock';
     } else if (computerSelection == 'rock' && playerSelection == 'scissors') {
-        console.log('You lose! Rock beats scissors');
+        return 'You lose! Rock beats scissors';
     } else if (computerSelection == 'scissors' && playerSelection == 'paper') {
-        console.log('You lose! Scissors beats paper');
+        return 'You lose! Scissors beat paper';
     } else {
-        console.log('You won');
+        return 'You won';
     }
 }
 
 
-/*4.
-1) Write a new function that will allow playing 5 rounds
-2) After each round there should be a message of the result
-3) The result messages should be stored somewhere, and after 5 rounds there should be a winner and loser
-4)
-*/
+//4.
 
+    let player = 0;
+    let computer = 0;
+    let winner;
 
 function game() {
+
     for (let i = 0; i < 5; i++){
+        let result = playRound('rock', getComputerChoice());
 
-        let result = playRound('Rock', getComputerChoice());
-
-        if (result == 'You won') {console.log('Woah!')};
-        
-        // if (result == 'You won') {
-        //     player = player++;
-        //     console.log(player)    
-        // }
-        // } else if (result == 'You lose! Scissors beats paper' || result == 'You lose! Rock beats scissors' || result == 'You lose! Paper beats rock') {
-        //     console.log(`Score: ${computer++}`)
-        // } else {}
+        if (result == 'You won') {
+            ++player;
+            console.log(`Player score: ${player}`);
+        } else if (result == 'You lose! Paper beats Rock' || result == 'You lose! Rock beats scissors' || result == 'You lose! Scissors beat paper'){
+            ++computer;
+            console.log(`Computer score: ${computer}`)
+        } else {
+            console.log('tie');
+        }
     }
+
+    switch(true) {
+        case player>computer:
+            winner = 'You are winner! Congrats';
+            break;
+
+        case computer>player:
+            winner = 'I am sorry for your defeat...';
+            break;
+            
+        default: winner = "Neither, it's a freaking tie xD";
+    }
+    return winner;
 }
 
 console.log(game());
+
