@@ -1,11 +1,3 @@
-/*1. create 3 different values: rock, paper, scissors 
-2. make computer pick either 
-3. create a function for the game with a winner + loser (taking into account the rules) 
-4. player needs to type in one of the options (input should be case-insensitive)
-5. a message will be shown (either tie/you win/you lose)
-6. the game goes on till a player/computer wins 5 times in general */
-
-//1,2
 
 function getComputerChoice() {
     const gameArray = ['rock', 'paper', 'scissors'];
@@ -13,11 +5,18 @@ function getComputerChoice() {
     return randomItem;
 }
 
-//3
+// limit input to the three options (no number, no empty string) otherwise alert an error. If there's the alert, the game function mustn't run!
+
+// function dontStartGame
+
+// input !== NaN ? alert('Choose these: paper, scissors, rock') : '';
+
+// else if (computerSelection == 'rock' && playerSelection == 'paper' || computerSelection == 'scissors' && playerSelection == 'rock' || computerSelection == 'paper' && playerSelection == 'scissors')
 
 function playRound(playerSelection, computerSelection) {
 
-    // playerSelection = prompt('Your choice?');
+    let input = prompt('Your choice?', '');
+    playerSelection = input;
     playerSelection = playerSelection.toLowerCase();
 
     if (computerSelection == playerSelection) {
@@ -32,9 +31,6 @@ function playRound(playerSelection, computerSelection) {
         return 'You won';
     }
 }
-
-
-//4.
 
     let player = 0;
     let computer = 0;
@@ -58,14 +54,14 @@ function game() {
 
     switch(true) {
         case player>computer:
-            winner = 'You are winner! Congrats';
+            winner = 'Winner: You';
             break;
 
         case computer>player:
-            winner = 'I am sorry for your defeat...';
+            winner = 'Winner: Computer';
             break;
             
-        default: winner = "Neither, it's a freaking tie xD";
+        default: winner = "Winner: Neither, it's a freaking tie xD";
     }
     return winner;
 }
