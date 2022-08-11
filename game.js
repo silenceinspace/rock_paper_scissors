@@ -56,7 +56,8 @@ function game() {
             ++computer;
             console.log(`Tie: ${player} - ${computer}`);
         } else {
-            alert('Choose one of these: rock, paper, or scissors'); 
+            alert('Choose one of these: rock, paper, or scissors');
+            // endGame();
         }
     }
 
@@ -78,5 +79,12 @@ function game() {
         return winner; //returning this value so that it's stored in the global scope variable called "winner"
 }
 
+// function endGame() {
+//     player = 0;
+//     computer = 0;
+//     return; 
+// }
+
 console.log(game());
+
 
