@@ -9,12 +9,12 @@ function getComputerChoice() {
 
 // 2. create a function for one round, it's like a sample for the 5-round function
 
-let input; //declare this variable in a global scope so that each new round will ask for input
+let gameInput; //declare this variable in a global scope so that each new round will ask for input
 
 function playRound(playerSelection, computerSelection) {
 
-    input = prompt('Your choice?', '');
-    playerSelection = input;
+    gameInput = prompt('Your choice?', '');
+    playerSelection = gameInput;
     playerSelection = playerSelection.toLowerCase(); //non-sensitive input, any correct option (PaPer/sciSSorS/ROCK will be converted to lower case)
 
     if (computerSelection == playerSelection) {
@@ -36,14 +36,14 @@ function playRound(playerSelection, computerSelection) {
 
 // 3. create the 5-round function that keeps the score of rounds and announces a winner after 5 rounds 
 
-    let player = 0;
-    let computer = 0;
-    let winner;
+let player = 0;
+let computer = 0;
+let winner;
 
-function game() {
+function startGame() {
 
     for (let i = 0; i < 5; i++){
-        let result = playRound(input, getComputerChoice()); // add two arguments to where function parameters are
+        let result = playRound(gameInput, getComputerChoice()); // add two arguments to where function parameters are
 
         if (result == 'You won') {
             ++player; //incrementing by 1 the score of player
@@ -57,34 +57,29 @@ function game() {
             console.log(`Tie: ${player} - ${computer}`);
         } else {
             alert('Choose one of these: rock, paper, or scissors');
-            // endGame();
         }
-    }
-
-    switch(true) { //determining a winner
-        case player>computer:
-            winner = 'Winner: You';
-            break;
-
-        case computer>player:
-            winner = 'Winner: Computer';
-            break;
-            
-        case computer === player && computer !==0 && player !==0:
-            winner = "Winner: Neither, it's a freaking tie xD";
-            break;
-
-        default: winner = 'Nothing';
-        }
-        return winner; //returning this value so that it's stored in the global scope variable called "winner"
+    } return determineWinner(); //instead of having that switch statement in the same function with a for loop, I created a helper function to make my code cleaner 
 }
 
-// function endGame() {
-//     player = 0;
-//     computer = 0;
-//     return; 
-// }
+function determineWinner() {
+    switch(true) {
+    case player>computer:
+        winner = 'Winner: You';
+        break;
 
-console.log(game());
+    case computer>player:
+        winner = 'Winner: Computer';
+        break;
+        
+    case computer === player && computer !==0 && player !==0:
+        winner = "Winner: Neither, it's a freaking tie xD";
+        break;
+
+    default: winner = 'Nothing';
+    }
+    return winner; //returning this value so that it's stored in the global scope variable called "winner"
+}
+
+console.log(startGame());
 
 
