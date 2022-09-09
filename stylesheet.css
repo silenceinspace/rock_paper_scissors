@@ -45,7 +45,7 @@ img {
     height: 200px;
 }
 
-button {
+/* button {
     border: 3px solid red;
     background-color: black;
     color: white;
@@ -54,7 +54,7 @@ button {
     width:200px;
     height: 50px;
 
-}
+} */
 
 /* button:hover{
     background-color: white;
@@ -89,3 +89,12 @@ button {
     height: 50px;
 }
 
+/* 
+    1. add some text on the page ('make your choice', 'rules' and etc.)
+    2. make a decision about choosing by images or buttons
+    3. add credit to the authors of photo
+    4. add some animation at the end of the game (if win then something positive, if lose then something sad)
+    5. improve text messages for win and tie - make them more detailed "you won, scissors beat paper"
+    6. add icon to the project
+    7. optimize code (html, css, js) 
+*/

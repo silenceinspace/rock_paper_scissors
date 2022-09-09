@@ -8,9 +8,9 @@ function getComputerChoice() {
 }
 
 // 2. use buttons for getting values
-const buttons = document.querySelectorAll('button');
-let playerChoice = buttons.forEach((btn) => {
-    btn.addEventListener('click', e => {
+const images = document.querySelectorAll('img');
+let playerChoice = images.forEach((img) => {
+    img.addEventListener('click', e => {
         if (e.target.className == 'Rock') {
             playRound('rock', getComputerChoice())
         } else if (e.target.className == 'Paper') {
