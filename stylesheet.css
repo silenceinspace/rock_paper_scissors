@@ -7,7 +7,6 @@
 body {
     font-family:Arial, Helvetica, sans-serif;
     min-width: 100vh;
-    min-height: 100vh;
     background-color: grey;
 }
 
@@ -43,13 +42,15 @@ a:hover{
     font-size: 50px;
     color:darkmagenta;
     text-shadow: 2px 2px 5px yellow;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .greeting {
+    margin: 10px auto;
     font-size: 30px;
     text-align: center;
-    color:orange;
+    max-width: 1000px;
+    color: yellow;
 }
 
 /*hover text over images like hints for choices*/
@@ -133,7 +134,6 @@ button:hover {
 /* 
    
     3. add credit to the authors of photo
-    4. add some animation at the end of the game (if win then something positive, if lose then something sad)
     5. improve text messages for win and tie - make them more detailed "you won, scissors beat paper"
     6. add icon to the project
     7. optimize code (html, css, js)

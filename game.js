@@ -58,12 +58,40 @@ let computer = 0;
 let winner;
 
 let hide = document.getElementById('hide');
+let greeting = document.querySelector('.greeting');
+
+function showForWinner(){
+    let finals = document.querySelector('.final-pictures');
+    let image = document.createElement('img');
+    image.setAttribute('src', './images/final image/deva-williamson-S2jw81lfrG0-unsplash.jpg');
+    let para = document.createElement('p');
+    para.textContent = "Here's your little surprise, you deserver a piece of cake <3"; 
+    image.style.marginTop = '10px';
+    image.style.border = '2px solid red';
+    finals.style.textAlign = 'center'; 
+    finals.append(image, para);
+    greeting.style.display = 'none';
+}
+
+function showForLoser(){
+    let finals = document.querySelector('.final-pictures');
+    let image = document.createElement('img');
+    image.setAttribute('src', './images/final image/thought-catalog-fnztlIb52gU-unsplash.jpg');
+    let para = document.createElement('p');
+    para.textContent = "Even the best of us have to go through failure sometimes... Cheer up and play again!"; 
+    image.style.marginTop = '10px';
+    image.style.border = '2px solid red';
+    finals.style.textAlign = 'center'; 
+    finals.append(image, para);
+    greeting.style.display = 'none';
+}
 
 function gameOver() {
     switch(true) {
         case player === 5 && player>computer:
             div.textContent = 'Winner: You';
             hide.style.display = 'none';
+            showForWinner();
             startNewGame();
             break;
             
@@ -71,6 +99,7 @@ function gameOver() {
             div.textContent = 'Winner: Computer';
             hide.style.display = 'none';
             startNewGame();
+            showForLoser();
             break;
     }
     return winner = div.textContent;
