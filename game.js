@@ -65,7 +65,6 @@ function gameOver() {
             div.textContent = 'Winner: You';
             hide.style.display = 'none';
             startNewGame();
-            // .classList.add('final');
             break;
             
         case computer === 5 && computer>player:

@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The game</title>
     <script src="./game.js" defer></script>
     <link rel="stylesheet" href="./stylesheet.css">
 </head>
 
 <body>
     <div id="container">
+        <div class="links">
+            <ul class="links-row"> 
+                <li><a target="_blank" href="https://en.wikipedia.org/wiki/Rock_paper_scissors">Rules</a></li>
+                <li><a href="">Credits</a></li>
+            </ul>
+        </div>
         <div class="top">
             <p class="title">LEGENDARY GAME</p>
         </div>
+        <div>
+            <p class="greeting">Choose carefully! If you win, there'll be some pleasant surprise waiting for you in the end:)</p>
+        </div>
         <div class="box" id="hide">
             <div class="form">
-                <img src="./images/fadilah-im-sYEyCLSWSY4-unsplash.jpg" alt="scissors option" class="Rock">
-                <!-- <button class="Rock">Rock</button> -->
+                <span class="hoverChoice" data-hover="ROCK">
+                    <img src="./images/fadilah-im-sYEyCLSWSY4-unsplash.jpg" alt="scissors option" class="Rock">
+                </span>
             </div>
             <div class="form">
-                <img src="./images/fadilah-im-AnYg7fO8-m8-unsplash.jpg" alt="paper option" class="Paper">
-                <!-- <button class="Paper">Paper</button> -->
+                <span class="hoverChoice" data-hover="PAPER">
+                    <img src="./images/fadilah-im-AnYg7fO8-m8-unsplash.jpg" alt="paper option" class="Paper">
+                </span>
             </div>
             <div class="form">
-                <img src="./images/fadilah-im-2HkXcDPnGh4-unsplash.jpg" alt="rock option" class="Scissors">
-                <!-- <button class="Scissors">Scissors</button> -->
+                <span class="hoverChoice" data-hover="SCISSORS">
+                    <img src="./images/fadilah-im-2HkXcDPnGh4-unsplash.jpg" alt="rock option" class="Scissors">
+                </span>
             </div>
         </div>
 
