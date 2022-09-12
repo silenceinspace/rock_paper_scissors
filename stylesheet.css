@@ -6,7 +6,7 @@
 
 body {
     font-family:Arial, Helvetica, sans-serif;
-    min-width: 100vh;
+    height: 100vh;
     background-color: grey;
 }
 
@@ -42,7 +42,7 @@ a:hover{
     font-size: 50px;
     color:darkmagenta;
     text-shadow: 2px 2px 5px yellow;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .greeting {
@@ -131,11 +131,20 @@ button:hover {
     color:red;
 }
 
+.footer {
+    padding: 30px 0px;
+    margin-top: auto;
+    background-color:black;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* 
    
-    3. add credit to the authors of photo
-    5. improve text messages for win and tie - make them more detailed "you won, scissors beat paper"
-    6. add icon to the project
-    7. optimize code (html, css, js)
-    8. learn some "animated bars"
+    1. add credit to the authors of photo
+    2. add icon to the project
+    3. optimize code (html, css, js)
+    4. footer must be at the very bottom
 */
