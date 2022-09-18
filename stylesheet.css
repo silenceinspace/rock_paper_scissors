@@ -6,7 +6,8 @@
 
 body {
     font-family:Arial, Helvetica, sans-serif;
-    height: 100vh;
+    /* min-height: 100vh; */
+    /* min-width: 100vh; */
     background-color: grey;
 }
 
@@ -36,6 +37,30 @@ a {
 
 a:hover{
     color:red;
+}
+
+/* dropdown menu for credits */
+.dropdown {
+    position:relative;
+    display:inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    min-width: 100%;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .title {
@@ -143,8 +168,6 @@ button:hover {
 
 /* 
    
-    1. add credit to the authors of photo
-    2. add icon to the project
     3. optimize code (html, css, js)
     4. footer must be at the very bottom
 */

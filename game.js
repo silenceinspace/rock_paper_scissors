@@ -65,7 +65,7 @@ function showForWinner(){
     let image = document.createElement('img');
     image.setAttribute('src', './images/final image/deva-williamson-S2jw81lfrG0-unsplash.jpg');
     let para = document.createElement('p');
-    para.textContent = "Here's your little surprise, you deserver a piece of cake <3"; 
+    para.textContent = "Here's your little surprise, you deserved a piece of cake <3"; 
     image.style.marginTop = '10px';
     image.style.border = '2px solid red';
     finals.style.textAlign = 'center'; 
