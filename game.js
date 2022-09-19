@@ -57,20 +57,19 @@ let player = 0;
 let computer = 0;
 let winner;
 
-let hide = document.getElementById('hide');
-let greeting = document.querySelector('.greeting');
+let hide = document.getElementById('container');
 
 function showForWinner(){
     let finals = document.querySelector('.final-pictures');
     let image = document.createElement('img');
     image.setAttribute('src', './images/final image/deva-williamson-S2jw81lfrG0-unsplash.jpg');
     let para = document.createElement('p');
-    para.textContent = "Here's your little surprise, you deserved a piece of cake <3"; 
+    para.textContent = "Here's your little surprise, you deserved a piece of cake <3";
+    para.style.maxWidth = '800px'; 
     image.style.marginTop = '10px';
     image.style.border = '2px solid red';
     finals.style.textAlign = 'center'; 
     finals.append(image, para);
-    greeting.style.display = 'none';
 }
 
 function showForLoser(){
@@ -78,12 +77,12 @@ function showForLoser(){
     let image = document.createElement('img');
     image.setAttribute('src', './images/final image/thought-catalog-fnztlIb52gU-unsplash.jpg');
     let para = document.createElement('p');
-    para.textContent = "Even the best of us have to go through failure sometimes... Cheer up and play again!"; 
+    para.textContent = "Even the best of us have to go through failure sometimes... Cheer up and play again!";
+    para.style.maxWidth = '800px';
     image.style.marginTop = '10px';
     image.style.border = '2px solid red';
     finals.style.textAlign = 'center'; 
     finals.append(image, para);
-    greeting.style.display = 'none';
 }
 
 function gameOver() {

@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div id="container">
-        <div class="links">
+    <nav class="navbar">
+        <div class="container">
             <ul class="links-row"> 
                 <li><a target="_blank" href="https://en.wikipedia.org/wiki/Rock_paper_scissors">Rules</a></li>
                 <li>
@@ -30,37 +30,47 @@
                 </li>
             </ul>
         </div>
+    </nav>
+
+    <header class="header">
         <div class="top">
             <p class="title">LEGENDARY GAME</p>
         </div>
-        <div class="greeting">
-            <p>Choose carefully! If you win [generally 5 times], there'll be some pleasant surprise waiting for you in the end:)</p>
-        </div>
-        <div class="box" id="hide">
-            <div class="form">
-                <span class="hoverChoice" data-hover="ROCK">
-                    <img src="./images/fadilah-im-sYEyCLSWSY4-unsplash.jpg" alt="scissors option" class="Rock">
-                </span>
+    </header>
+
+    <section class="game">
+        <div id="container"> 
+            <div class="greeting">
+                <p>Choose carefully! If you win [generally 5 times], there'll be some pleasant surprise waiting for you in the end:)</p>
             </div>
-            <div class="form">
-                <span class="hoverChoice" data-hover="PAPER">
-                    <img src="./images/fadilah-im-AnYg7fO8-m8-unsplash.jpg" alt="paper option" class="Paper">
-                </span>
-            </div>
-            <div class="form">
-                <span class="hoverChoice" data-hover="SCISSORS">
-                    <img src="./images/fadilah-im-2HkXcDPnGh4-unsplash.jpg" alt="rock option" class="Scissors">
-                </span>
+            <div class="box" id="hide">
+                <div class="form">
+                    <span class="hoverChoice" data-hover="ROCK">
+                        <img src="./images/fadilah-im-sYEyCLSWSY4-unsplash.jpg" alt="scissors option" class="Rock">
+                    </span>
+                </div>
+                <div class="form">
+                    <span class="hoverChoice" data-hover="PAPER">
+                        <img src="./images/fadilah-im-AnYg7fO8-m8-unsplash.jpg" alt="paper option" class="Paper">
+                    </span>
+                </div>
+                <div class="form">
+                    <span class="hoverChoice" data-hover="SCISSORS">
+                        <img src="./images/fadilah-im-2HkXcDPnGh4-unsplash.jpg" alt="rock option" class="Scissors">
+                    </span>
+                </div>
             </div>
         </div>
 
-        <div class="middle">
+    </section>
+    <section class="visible-part">
+        <div class="updated-info">
             <div class="outcome"></div>
             <div class="score"></div>
             <div class="final-pictures"></div>
             <div class="new-game"></div>
         </div>
-    </div>
+    </section>
 
     <footer class="footer">
         <div class="copyright">

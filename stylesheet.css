@@ -6,26 +6,23 @@
 
 body {
     font-family:Arial, Helvetica, sans-serif;
-    /* min-height: 100vh; */
-    /* min-width: 100vh; */
     background-color: grey;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.top {
-    display:flex;
-    justify-content: center;
+/* navbar */
+nav .links-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
 }
 
 ul {
     list-style-type: none;
     margin:10px;
     padding:0px;
-}
-
-.links-row {
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
 }
 
 a {
@@ -63,6 +60,13 @@ a:hover{
     display: block;
 }
 
+/* header */
+header .top {
+    display:flex;
+    justify-content: center;
+}
+
+/* section game */
 .title {
     font-size: 50px;
     color:darkmagenta;
@@ -79,7 +83,6 @@ a:hover{
 }
 
 /*hover text over images like hints for choices*/
-
 .hoverChoice {
     position:relative;
 }
@@ -117,7 +120,6 @@ a:hover{
 div.form {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 img {
@@ -125,6 +127,7 @@ img {
     height: 200px;
 }
 
+/* animation for photos */
 .form {
     transition: all .5s ease-in-out;
 }
@@ -133,7 +136,8 @@ img {
     transform: scale(1.2);
 }
 
-.middle {
+/* section visible-part */
+.updated-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,18 +160,17 @@ button:hover {
     color:red;
 }
 
+/* footer */
 .footer {
-    padding: 30px 0px;
-    margin-top: auto;
+    padding: 15px;
     background-color:black;
     color: white;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    margin-top: auto;
 }
 
 /* 
-   
-    3. optimize code (html, css, js)
-    4. footer must be at the very bottom
+    1. optimize code (html, css)
+    3. responsive css (for mobile devices)
 */
+
