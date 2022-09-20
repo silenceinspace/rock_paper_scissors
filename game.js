@@ -25,30 +25,50 @@ let playerChoice = images.forEach((img) => {
 function playRound(playerSelection, computerSelection) {
 
     if (computerSelection == playerSelection) {
-        div.textContent = 'Tie';
-        score.textContent = `Tie: ${player} - ${computer}`; 
-    } else if (computerSelection == 'paper' && playerSelection == 'rock') {
-        div.textContent = 'You lose! Paper beats Rock';
+        if (playerSelection == 'paper') {
+            div.textContent = 'Tie! You both have PAPER';
+            score.textContent = `Score: ${player} - ${computer}`;
+        } else if (playerSelection == 'rock') {
+            div.textContent = 'Tie! You both have ROCK';
+            score.textContent = `Score: ${player} - ${computer}`;
+        } else if (playerSelection == 'scissors') {
+            div.textContent = 'Tie! You both have SCISSORS';
+            score.textContent = `Score: ${player} - ${computer}`;
+        }
+    }
+    
+    if (computerSelection == 'paper' && playerSelection == 'rock') {
+        div.textContent = 'Lose! Paper beats Rock';
         lose();
     } else if (computerSelection == 'rock' && playerSelection == 'scissors') {
-        div.textContent = 'You lose! Rock beats scissors';
+        div.textContent = 'Lose! Rock beats scissors';
         lose();
     } else if (computerSelection == 'scissors' && playerSelection == 'paper') {
-        div.textContent = 'You lose! Scissors beat paper';
+        div.textContent = 'Lose! Scissors beat paper';
         lose();
-    } else if (
-        computerSelection == 'rock' && playerSelection == 'paper' || computerSelection == 'scissors' && playerSelection == 'rock' || computerSelection == 'paper' && playerSelection == 'scissors'
-    ) {
-        div.textContent = 'You won';
-        ++player;
-        score.textContent = `Player won: ${player} - ${computer}`; 
+    }
+
+    if (computerSelection == 'rock' && playerSelection == 'paper') {
+        div.textContent = 'Win! Paper beats rock';
+        win();
+    } else if (computerSelection == 'scissors' && playerSelection == 'rock') {
+        div.textContent = 'Win! Rock beats scissors';
+        win();
+    } else if (computerSelection == 'paper' && playerSelection == 'scissors') {
+        div.textContent = 'Win! Scissors beat rock';
+        win();
     } return gameOver();
 }
 
 function lose(){
     ++computer;
-    score.textContent = `Computer won: ${player} - ${computer}`;
+    score.textContent = `Score: ${player} - ${computer}`;
 };
+
+function win(){
+    ++player;
+    score.textContent = `Score: ${player} - ${computer}`;
+}
 
 // 4. track and display progress of game
 const div = document.querySelector('.outcome');

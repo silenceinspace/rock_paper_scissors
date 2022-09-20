@@ -171,13 +171,13 @@ button:hover {
 
 /* responsiveness for smaller screens*/
 
-@media(max-width:768px) {
+/* @media(max-width:768px) {
     .box {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-}
+} */
 
 @media(max-width: 480px) {
     .title {
