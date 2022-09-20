@@ -178,3 +178,18 @@ button:hover {
         align-items: center;
     }
 }
+
+@media(max-width: 480px) {
+    .title {
+        text-align: center;
+    }
+    .greeting {
+        font-size: 20px;
+        font-weight: bold;
+        max-width: 350px;
+    }
+    .outcome {
+        max-width: 350px;
+        text-align: center;
+    }
+}
