@@ -7,7 +7,7 @@ function getComputerChoice() {
     return randomItem;
 }
 
-// 2. use buttons for getting values
+// 2. image clicking for getting values
 const images = document.querySelectorAll('img');
 let playerChoice = images.forEach((img) => {
     img.addEventListener('click', e => {
